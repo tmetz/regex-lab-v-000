@@ -12,7 +12,7 @@ end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
   first_word = text.match(/\b[A-Z]\w*/) ? true : false
-  punctuation = text =~ /[!?\.]$/
+  punctuation = text.match(/[!?\.]$/) ? true : false
   puts first_word
   puts punctuation
   return first_word && punctuation
